@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Table(name = "employee")
+@Table(name = "interroview_employee")
 @Entity
 public class Employee {
 
@@ -15,10 +15,10 @@ public class Employee {
 	private Long id;
 	private String hodName;
 
-	Employee() {
+	public Employee() {
 	}
 
-	Employee(String hodName) {
+	public Employee(String hodName) {
 		this.hodName = hodName;
 	}
 

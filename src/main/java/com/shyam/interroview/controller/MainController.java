@@ -46,7 +46,6 @@ public class MainController {
 		// add hod status as active as we are just creating he HOD
 		dep.setStatus("Active");
 
-		System.out.println("Just to stop the debugger." + dep);
 		departmentService.updateDepartment(dep);
 
 		// redirect the user to the department listing page.
