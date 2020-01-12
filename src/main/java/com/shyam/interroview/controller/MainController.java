@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.shyam.interroview.entity.Department;
 import com.shyam.interroview.service.DepartmentService;
+import com.shyam.interroview.service.EmployeeService;
 
 @Controller
 @RequestMapping("/")
@@ -24,6 +25,9 @@ public class MainController {
 
 	@Autowired
 	private DepartmentService departmentService;
+	
+	@Autowired
+	private EmployeeService empService;
 
 	@RequestMapping("main")
 	public String finalPage(Model model) {
@@ -31,6 +35,7 @@ public class MainController {
 
 		// get the departments from the database and add it into the model
 		model.addAttribute("departments", departmentService.getDepartments());
+		model.addAttribute("hods", empService.getAllEmployee());
 		return "index";
 	}
 

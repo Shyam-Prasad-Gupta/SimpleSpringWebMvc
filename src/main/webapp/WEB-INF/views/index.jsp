@@ -388,13 +388,17 @@
                            </div>
                            <label class="col-lg-2 col-form-label">HOD</label>
                            <div class="col-sm-4">
-                              <select class="form-control" id="sel1" name="depHod">
-                                 <option>Select</option>
+									<select class="form-control" id="sel1" name="depHod">
+										<option>Select</option>
+										<c:forEach var="tempHOD" items="${hods}">
+											<option value="${tempHOD.hodName}">${tempHOD.hodName}</option>
+										</c:forEach>
+										<!-- <option>Select</option>
                                  <option value="TEST HOD 1">TEST HOD 1</option>
                                  <option value="TEST HOD 2">TEST HOD 2</option>
-                                 <option value="TEST HOD 3">TEST HOD 3</option>
-                              </select>
-                           </div>
+                                 <option value="TEST HOD 3">TEST HOD 3</option> -->
+									</select>
+								</div>
                         </div>
                         <div class="form-group row">
                            <label class="col-lg-2 col-form-label">Type</label>
